@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  nextjsstarter:
+    container_name: nextjsstarter
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+    networks:
+      - nextjsstarternetwork
+    stdin_open: true
+    tty: true
+
+networks:
+  nextjsstarternetwork:
